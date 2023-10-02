@@ -1,0 +1,14 @@
+{
+  "name": "asyncaudio",
+  "version": "1.0.0",
+  "description": "An audio player in vanilla JS.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tailwindcss -i input.css -o output.css --watch"
+  },
+  "author": "Kenan Casey",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
