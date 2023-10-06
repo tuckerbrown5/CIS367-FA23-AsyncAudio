@@ -1,25 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Async Audio</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Audio PLayer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-yellow-200 to-red-600 flex items-center justify-center h-screen text-center font-roboto">
 
-    <link rel="stylesheet" href="output.css" />
-  </head>
-  <body>
-    <h1 class="text-8xl font-bold underline">Hello world!</h1>
+    <div id="clean-audio-player" class="p-5 w-96 rounded-xl shadow-2xl bg-gradient-to-b from-yellow-300 to-red-700">
+        <div id="albumart" class="w-full h-56 mb-4">
+            <img src="albumart/Fraggle.jpeg" alt="Album Art" class="w-full h-full rounded-lg object-cover">
+        </div>
 
-    <i class="fa-solid fa-play"></i>
+        <div id="song-title" class="text-gray-800 text-2xl font-bold mb-1">Kraggle</div>
+        <div id="artist" class="text-gray-800 mb-2">Levi Holland</div>
 
-    <script src="main.js"></script>
-  </body>
+        <audio controls id="audio-controls" class="w-full mb-4">
+            <source src="your-audio-file.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div id="control-buttons" class="flex items-center justify-center space-x-2.5">
+            <button class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
+    </div>
+</body>
 </html>
