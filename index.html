@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Async Audio PLayer</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <title>Unified Music Player</title>
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Roboto font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -20,29 +18,34 @@
 <body class="bg-gradient-to-b from-yellow-200 to-red-600 flex items-center justify-center h-screen text-center font-roboto">
 
     <div id="clean-audio-player" class="p-5 w-96 rounded-xl shadow-2xl bg-gradient-to-b from-yellow-300 to-red-700">
-        <div id="albumart" class="w-full h-56 mb-4">
-            <img src="albumart/Fraggle.jpeg" alt="Album Art" class="w-full h-full rounded-lg object-cover">
+        <div class="img-container">
+            <img src="albumart/Fraggle.jpeg" alt="Album" id="cover" class="w-full h-56 mb-4 rounded-lg object-cover" id="cover">
         </div>
 
-        <div id="song-title" class="text-gray-800 text-2xl font-bold mb-1">Kraggle</div>
-        <div id="artist" class="text-gray-800 mb-2">Levi Holland</div>
+        <div class="music-info">
+            <h4 id="title" class="text-gray-800 text-2xl font-bold mb-1">Kraggle</h4>
+            <div id="artist" class="text-gray-800 mb-2">Levi Holland</div>
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
 
-        <audio controls id="audio-controls" class="w-full mb-4">
-            <source src="your-audio-file.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <audio src="your-audio-file.mp3" id="audio"></audio>
         
-        <div id="control-buttons" class="flex items-center justify-center space-x-2.5">
-            <button class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+        <div id="control-buttons" class="flex items-center justify-center space-x-2.5 mt-4">
+            <button id="prev" class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
                 <i class="fas fa-step-backward"></i>
             </button>
-            <button class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+            <button id="play" class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
                 <i class="fas fa-play"></i>
             </button>
-            <button class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+            <button id="next" class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
                 <i class="fas fa-step-forward"></i>
             </button>
         </div>
     </div>
+    
+    <script src="main.js"></script>
 </body>
 </html>
+
