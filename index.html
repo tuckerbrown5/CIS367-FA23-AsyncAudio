@@ -15,31 +15,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-b from-yellow-200 to-red-600 flex items-center justify-center h-screen text-center font-roboto">
+<body id='bigbody'class="bg-gradient-to-b from-yellow-200 to-red-600 flex items-center justify-center h-screen text-center font-roboto">
 
-    <div id="clean-audio-player" class="p-5 w-96 rounded-xl shadow-2xl bg-gradient-to-b from-yellow-300 to-red-700">
+    <div id="music-container" class="p-5 w-96 rounded-xl shadow-2xl bg-gradient-to-b">
         <div class="img-container">
-            <img src="albumart/Fraggle.jpeg" alt="Album" id="cover" class="w-full h-56 mb-4 rounded-lg object-cover" id="cover">
+            <img src=""  id="cover"  alt="" class="w-full h-56 mb-4 rounded-lg object-cover"></img>
         </div>
 
         <div class="music-info">
-            <h4 id="title" class="text-gray-800 text-2xl font-bold mb-1">Kraggle</h4>
-            <div id="artist" class="text-gray-800 mb-2">Levi Holland</div>
-            <div class="progress-container" id="progress-container">
-                <div class="progress" id="progress"></div>
-            </div>
+            <h4 id="title" class="text-gray-400 text-2xl font-bold mb-1"></h4>
+            <span id="artist" class="text-gray-400 mb-2"></span>
+        </div>
+        <div class="progress-container bg-white w-5" id="progress-container" >
+            <div class="progress bg-white w-5" id="progress"></div>
         </div>
 
-        <audio src="your-audio-file.mp3" id="audio"></audio>
+        <audio src="" id="audio"></audio>
         
         <div id="control-buttons" class="flex items-center justify-center space-x-2.5 mt-4">
-            <button id="prev" class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+            <button id="prev" class="bg-gray-400 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
                 <i class="fas fa-step-backward"></i>
             </button>
-            <button id="play" class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+            <button id="play" class="bg-gray-400 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
                 <i class="fas fa-play"></i>
             </button>
-            <button id="next" class="bg-gray-800 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
+            <button id="next" class="bg-gray-400 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 transition-colors">
                 <i class="fas fa-step-forward"></i>
             </button>
         </div>
