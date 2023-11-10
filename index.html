@@ -26,8 +26,16 @@
             <h4 id="title" class="text-gray-400 text-2xl font-bold mb-1"></h4>
             <span id="artist" class="text-gray-400 mb-2"></span>
         </div>
-        <div class="progress-container bg-white w-5" id="progress-container" >
-            <div class="progress bg-white w-5" id="progress"></div>
+
+        <div class="max-w-md mx-auto">
+            <div class="progress-container bg-slate-200 h-5 rounded-full z-50" id="progress-container" >
+
+                <div class="progress bg-white h-2 justify-start rounded-full" id="progress"></div>
+            </div>
+            <div class="flex justify-between">
+                <span id="currTime" class="text-gray-400 text-sm">0:00</span>
+                <span id="durTime" class="text-gray-400 text-sm">0:00</span>
+            </div>
         </div>
 
         <audio src="" id="audio"></audio>
